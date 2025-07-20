@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<!--  Language attribute will be updated by JS -->
+<html lang="en" data-lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>momo • Organic Hazelnuts & Cream from Monoszló</title>
+
+    <!-- ───── Mobile & SEO ───── -->
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <meta
+      name="description"
+      content="Family-run by Kata in Monoszló, Hungary. Premium organic hazelnuts and hazelnut cream for wholesale partners."
+    />
+    <link rel="canonical" href="https://momonuts.hu/" />
+
+    <!-- ───── Open Graph / Social share ───── -->
+    <meta property="og:title" content="momo • Organic Hazelnuts & Cream" />
+    <meta
+      property="og:description"
+      content="Premium Hungarian hazelnuts, grown and packed by Kata in Monoszló."
+    />
+    <meta property="og:url" content="https://momonuts.hu/" />
+    <meta property="og:type" content="website" />
+    <meta property="og:image" content="assets/og-image.png" />
+    <!-- replace when you have it -->
+
+    <!-- ───── Fonts & CSS ───── -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/style.css" />
+
+    <!-- ───── Plausible Analytics (privacy-friendly) ───── -->
+    <script
+      defer
+      data-domain="momonuts.hu"
+      src="https://plausible.io/js/plausible.js"
+    ></script>
+  </head>
+
+  <body>
+    <!-- ───── Language toggle ───── -->
+    <button
+      id="langToggle"
+      class="lang-toggle"
+      aria-label="Switch to Hungarian"
+    >
+      HU
+    </button>
+
+    <!-- ───── HERO ───── -->
+    <header class="hero">
+      <img
+        src="assets/logo.png"
+        alt="momo by Kata - chicken logo"
+        class="hero__logo"
+        width="300"
+        height="300"
+      />
+      <p class="hero__tagline" data-i18n="tagline"></p>
+      <a href="#order" class="btn btn--primary" data-i18n="cta-order"></a>
+    </header>
+
+    <!-- ─────  ABOUT  ───── -->
+    <section class="about reveal">
+      <div class="container">
+        <h2 data-i18n="about-h"></h2>
+        <p data-i18n="about-p"></p>
+      </div>
+    </section>
+
+    <!-- ───── PRODUCTS & PRICING ───── -->
+    <section class="product reveal" id="products">
+      <div class="container grid">
+        <div>
+          <h3 data-i18n="grades-h"></h3>
+          <ul class="list" data-i18n="grades-list"></ul>
+        </div>
+        <div>
+          <h3 data-i18n="price-h"></h3>
+          <ul class="list" data-i18n="price-list"></ul>
+          <h3 data-i18n="moq-h"></h3>
+          <p data-i18n="moq-p"></p>
+          <h3 data-i18n="shelf-h"></h3>
+          <p data-i18n="shelf-p"></p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ───── CALL-TO-ACTION BANNER ───── -->
+    <section class="cta reveal">
+      <h2 data-i18n="cta-h"></h2>
+      <a href="#order" class="btn btn--secondary" data-i18n="cta-order"></a>
+    </section>
+
+    <!-- ───── ORDER FORM ───── -->
+    <section class="order reveal" id="order">
+      <div class="container">
+        <h2 data-i18n="order-h"></h2>
+
+        <form id="orderForm" aria-label="B2B order form">
+          <label>
+            <span data-i18n="form-name"></span>
+            <input name="name" type="text" required />
+          </label>
+
+          <label>
+            <span data-i18n="form-company"></span>
+            <input name="company" type="text" required />
+          </label>
+
+          <label>
+            <span data-i18n="form-email"></span>
+            <input name="email" type="email" required />
+          </label>
+
+          <label>
+            <span data-i18n="form-product"></span>
+            <select name="product" required>
+              <option value="nuts" data-i18n="opt-nuts"></option>
+              <option value="cream-unsweet" data-i18n="opt-cream-u"></option>
+              <option value="cream-sweet" data-i18n="opt-cream-s"></option>
+            </select>
+          </label>
+
+          <label>
+            <span data-i18n="form-qty"></span>
+            <input name="qty" type="number" min="1" required />
+          </label>
+
+          <button
+            type="submit"
+            class="btn btn--primary"
+            data-i18n="form-send"
+            aria-label="Send order"
+          ></button>
+        </form>
+
+        <p class="small" data-i18n="order-note"></p>
+      </div>
+    </section>
+
+    <!-- ───── CONTACT  ───── -->
+    <section class="contact reveal" id="contact">
+      <div class="container">
+        <h2 data-i18n="contact-h"></h2>
+        <p>
+          <strong>E-mail:</strong>
+          <a href="mailto:orders@momonuts.hu">orders@momonuts.hu</a><br />
+          <strong>Phone / WhatsApp:</strong> +36 30 123 4567<br />
+          <strong>Address:</strong> Tik hegy, Monoszló 8273, HU
+        </p>
+        <p class="small" data-i18n="contact-note"></p>
+      </div>
+    </section>
+
+    <footer class="footer">
+      © 2025 momo • <span data-i18n="footer-made"></span>
+    </footer>
+
+    <!-- ───── JS ───── -->
+    <script src="js/main.js" defer></script>
+  </body>
+</html>

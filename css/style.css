@@ -1,0 +1,244 @@
+/* ───── Brand tokens ───── */
+:root {
+  --rooster-red: #e94b3c;
+  --sky-blue: #4aade3;
+  --eggshell: #faf7f3;
+  --graphite-black: #2c2c2c;
+  --soft-sand: #e8e2dc;
+  --feather-grey: #b7b5b3;
+
+  --radius: 10px;
+  --shadow: 0 6px 12px hsl(0 0% 0%/0.08);
+  --transition: 0.25s ease;
+  --font: "Poppins", system-ui, sans-serif;
+}
+/* ───── Reset & base ───── */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+html {
+  scroll-behavior: smooth;
+}
+body {
+  font-family: var(--font);
+  color: var(--graphite-black);
+  background: var(--eggshell);
+  line-height: 1.55;
+  -webkit-font-smoothing: antialiased;
+}
+h1,
+h2,
+h3 {
+  font-weight: 600;
+  letter-spacing: -0.5px;
+}
+h1 {
+  font-size: clamp(2.2rem, 4vw+1rem, 4rem);
+}
+h2 {
+  font-size: clamp(1.6rem, 2.5vw+1rem, 2.6rem);
+}
+h3 {
+  font-size: 1.25rem;
+  margin-bottom: 0.5em;
+}
+p,
+li {
+  font-size: 1rem;
+}
+em {
+  font-style: italic;
+  color: var(--rooster-red);
+}
+a {
+  color: inherit;
+  text-decoration-thickness: 2px;
+}
+
+.container {
+  width: min(100% - 2rem, 1040px);
+  margin-inline: auto;
+}
+
+/* ───── Hero ───── */
+.hero {
+  padding: 5rem 1rem 6rem;
+  text-align: center;
+  background:
+    linear-gradient(135deg, rgba(232, 226, 220, 0.85) 0%, rgba(250, 247, 243, 0.7) 50%),
+    url('../assets/hero-background.png') top center no-repeat fixed;
+  background-size: 100vw auto;
+  position: relative;
+  overflow: hidden;
+}
+.hero__logo {
+  animation: float 5s ease-in-out infinite;
+}
+@keyframes float {
+  50% {
+    transform: translateY(-12px);
+  }
+}
+.hero__title {
+  margin: 0.8rem 0;
+  color: var(--graphite-black);
+}
+.hero__title span {
+  color: var(--rooster-red);
+}
+.hero__tagline {
+  margin-bottom: 2rem;
+  font-size: 1.1rem;
+  color: var(--feather-grey);
+}
+
+/* ───── Buttons ───── */
+.btn {
+  display: inline-block;
+  padding: 0.9rem 2.2rem;
+  border-radius: var(--radius);
+  font-weight: 600;
+  text-decoration: none;
+  transition: var(--transition);
+  box-shadow: var(--shadow);
+}
+.btn--primary {
+  background: var(--sky-blue);
+  color: #fff;
+}
+.btn--secondary {
+  background: var(--rooster-red);
+  color: #fff;
+}
+.btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 16px hsl(0 0% 0%/0.1);
+}
+@keyframes pulse {
+  0%,
+  100% {
+    transform: scale(1);
+    box-shadow: var(--shadow);
+  }
+  50% {
+    transform: scale(1.05);
+    box-shadow: 0 8px 20px hsl(0 0% 0%/0.25);
+  }
+}
+
+/* ───── Sections ───── */
+section {
+  padding: 4rem 1rem;
+}
+.about {
+  background: var(--soft-sand);
+}
+.product {
+  background: var(--eggshell);
+}
+.cta {
+  background: var(--rooster-red);
+  color: #fff;
+  text-align: center;
+}
+.contact {
+  background: var(--soft-sand);
+}
+
+/* ───── Grid for product specs ───── */
+.grid {
+  display: grid;
+  gap: 3rem;
+}
+@media (min-width: 700px) {
+  .grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+/* ───── Lists ───── */
+.list {
+  list-style: none;
+  margin-top: 0.5rem;
+}
+.list li {
+  margin: 0.25rem 0;
+  padding-left: 1.1em;
+  position: relative;
+}
+.list li::before {
+  content: "•";
+  position: absolute;
+  left: 0;
+  color: var(--rooster-red);
+  font-weight: 700;
+}
+
+/* ───── Footer ───── */
+.footer {
+  padding: 2rem 1rem;
+  text-align: center;
+  font-size: 0.875rem;
+  color: var(--feather-grey);
+}
+
+/* ───── Scroll‑reveal ───── */
+.reveal {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
+.reveal.is-visible {
+  opacity: 1;
+  transform: none;
+}
+
+/* ───── Utility ───── */
+.small {
+  font-size: 0.875rem;
+  color: var(--feather-grey);
+}
+
+/*  LANGUAGE TOGGLE  */
+.lang-toggle {
+  position: fixed;
+  top: 1rem;
+  right: 1rem;
+  background: var(--feather-grey);
+  color: #fff;
+  border: none;
+  border-radius: 50%;
+  width: 44px;
+  height: 44px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: var(--transition);
+  z-index: 1000;
+}
+.lang-toggle:hover {
+  background: var(--rooster-red);
+  box-shadow: var(--shadow);
+}
+
+/*  ORDER FORM  */
+form {
+  display: grid;
+  gap: 1rem;
+  margin-top: 2rem;
+}
+form label {
+  display: flex;
+  flex-direction: column;
+  font-weight: 600;
+  font-size: 0.95rem;
+}
+form input,
+form select {
+  margin-top: 0.4rem;
+  padding: 0.7rem;
+  border: 1px solid var(--feather-grey);
+  border-radius: var(--radius);
+  font-size: 1rem;
+}
