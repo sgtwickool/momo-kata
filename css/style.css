@@ -1,16 +1,16 @@
 /* ───── Brand tokens ───── */
 :root {
-  --rooster-red: #e94b3c;
-  --sky-blue: #4aade3;
-  --eggshell: #faf7f3;
-  --graphite-black: #2c2c2c;
-  --soft-sand: #e8e2dc;
-  --feather-grey: #b7b5b3;
+  --rustic-rose: #c94b4b;
+  --silkie-blue: #7ca6ad;
+  --soft-eggshell: #faf9f6;
+  --charcoal-black: #1d1d1b;
+  --wheat-amber: #d8a656;
+  --smoky-feather: #777671;
 
   --radius: 10px;
   --shadow: 0 6px 12px hsl(0 0% 0%/0.08);
   --transition: 0.25s ease;
-  --font: "Poppins", system-ui, sans-serif;
+  --font: "Raleway", system-ui, sans-serif;
 }
 /* ───── Reset & base ───── */
 * {
@@ -23,8 +23,8 @@ html {
 }
 body {
   font-family: var(--font);
-  color: var(--graphite-black);
-  background: var(--eggshell);
+  color: var(--charcoal-black);
+  background: var(--soft-eggshell);
   line-height: 1.55;
   -webkit-font-smoothing: antialiased;
 }
@@ -50,7 +50,7 @@ li {
 }
 em {
   font-style: italic;
-  color: var(--rooster-red);
+  color: var(--rustic-rose);
 }
 a {
   color: inherit;
@@ -83,15 +83,15 @@ a {
 }
 .hero__title {
   margin: 0.8rem 0;
-  color: var(--graphite-black);
+  color: var(--charcoal-black);
 }
 .hero__title span {
-  color: var(--rooster-red);
+  color: var(--rustic-rose);
 }
 .hero__tagline {
   margin-bottom: 2rem;
   font-size: 1.1rem;
-  color: var(--feather-grey);
+  color: var(--smoky-feather);
 }
 
 /* ───── Buttons ───── */
@@ -105,11 +105,11 @@ a {
   box-shadow: var(--shadow);
 }
 .btn--primary {
-  background: var(--sky-blue);
+  background: var(--silkie-blue);
   color: #fff;
 }
 .btn--secondary {
-  background: var(--rooster-red);
+  background: var(--rustic-rose);
   color: #fff;
 }
 .btn:hover {
@@ -133,18 +133,18 @@ section {
   padding: 4rem 1rem;
 }
 .about {
-  background: var(--soft-sand);
+  background: var(--wheat-amber);
 }
 .product {
-  background: var(--eggshell);
+  background: var(--soft-eggshell);
 }
 .cta {
-  background: var(--rooster-red);
+  background: var(--rustic-rose);
   color: #fff;
   text-align: center;
 }
 .contact {
-  background: var(--soft-sand);
+  background: var(--wheat-amber);
 }
 
 /* ───── Grid for product specs ───── */
@@ -172,7 +172,7 @@ section {
   content: "•";
   position: absolute;
   left: 0;
-  color: var(--rooster-red);
+  color: var(--rustic-rose);
   font-weight: 700;
 }
 
@@ -206,7 +206,7 @@ section {
   position: fixed;
   top: 1rem;
   right: 1rem;
-  background: var(--feather-grey);
+  background: var(--smoky-feather);
   color: #fff;
   border: none;
   border-radius: 50%;
@@ -218,7 +218,7 @@ section {
   z-index: 1000;
 }
 .lang-toggle:hover {
-  background: var(--rooster-red);
+  background: var(--rustic-rose);
   box-shadow: var(--shadow);
 }
 
@@ -238,7 +238,7 @@ form input,
 form select {
   margin-top: 0.4rem;
   padding: 0.7rem;
-  border: 1px solid var(--feather-grey);
+  border: 1px solid var(--smoky-feather);
   border-radius: var(--radius);
   font-size: 1rem;
 }
