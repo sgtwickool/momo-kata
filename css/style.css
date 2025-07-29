@@ -1,16 +1,25 @@
 /* ───── Brand tokens ───── */
 :root {
-  --rooster-red: #e94b3c;
-  --sky-blue: #4aade3;
-  --eggshell: #faf7f3;
-  --graphite-black: #2c2c2c;
-  --soft-sand: #e8e2dc;
-  --feather-grey: #b7b5b3;
+  /* Brand palette */
+  --rustic-rose: #c94b4b;
+  --silkie-blue: #7ca6ad;
+  --soft-eggshell: #faf9f6;
+  --charcoal-black: #1d1d1b;
+  --wheat-amber: #d8a656;
+  --smoky-feather: #777671;
+
+  /* Semantic tokens */
+  --color-primary: var(--rustic-rose);
+  --color-secondary: var(--silkie-blue);
+  --color-bg: var(--soft-eggshell);
+  --color-text: var(--charcoal-black);
+  --color-accent: var(--wheat-amber);
+  --color-muted: var(--smoky-feather);
 
   --radius: 10px;
   --shadow: 0 6px 12px hsl(0 0% 0%/0.08);
   --transition: 0.25s ease;
-  --font: "Poppins", system-ui, sans-serif;
+  --font: "Raleway", system-ui, sans-serif;
 }
 /* ───── Reset & base ───── */
 * {
@@ -23,8 +32,8 @@ html {
 }
 body {
   font-family: var(--font);
-  color: var(--graphite-black);
-  background: var(--eggshell);
+  color: var(--color-text);
+  background: var(--color-bg);
   line-height: 1.55;
   -webkit-font-smoothing: antialiased;
 }
@@ -50,7 +59,7 @@ li {
 }
 em {
   font-style: italic;
-  color: var(--rooster-red);
+  color: var(--color-primary);
 }
 a {
   color: inherit;
@@ -67,7 +76,7 @@ a {
   padding: 5rem 1rem 6rem;
   text-align: center;
   background:
-    linear-gradient(135deg, rgba(232, 226, 220, 0.85) 0%, rgba(250, 247, 243, 0.7) 50%),
+    linear-gradient(135deg, rgba(216, 166, 86, 0.12) 0%, rgba(250, 249, 246, 0.7) 50%),
     url('../assets/hero-background.png') top center no-repeat fixed;
   background-size: 100vw auto;
   position: relative;
@@ -83,15 +92,15 @@ a {
 }
 .hero__title {
   margin: 0.8rem 0;
-  color: var(--graphite-black);
+  color: var(--color-text);
 }
 .hero__title span {
-  color: var(--rooster-red);
+  color: var(--color-primary);
 }
 .hero__tagline {
   margin-bottom: 2rem;
   font-size: 1.1rem;
-  color: var(--feather-grey);
+  color: var(--color-muted);
 }
 
 /* ───── Buttons ───── */
@@ -105,11 +114,11 @@ a {
   box-shadow: var(--shadow);
 }
 .btn--primary {
-  background: var(--sky-blue);
+  background: var(--color-secondary);
   color: #fff;
 }
 .btn--secondary {
-  background: var(--rooster-red);
+  background: var(--color-primary);
   color: #fff;
 }
 .btn:hover {
@@ -133,18 +142,18 @@ section {
   padding: 4rem 1rem;
 }
 .about {
-  background: var(--soft-sand);
+  background: var(--color-accent);
 }
 .product {
-  background: var(--eggshell);
+  background: var(--color-bg);
 }
 .cta {
-  background: var(--rooster-red);
+  background: var(--color-primary);
   color: #fff;
   text-align: center;
 }
 .contact {
-  background: var(--soft-sand);
+  background: var(--color-accent);
 }
 
 /* ───── Grid for product specs ───── */
@@ -172,7 +181,7 @@ section {
   content: "•";
   position: absolute;
   left: 0;
-  color: var(--rooster-red);
+  color: var(--color-primary);
   font-weight: 700;
 }
 
@@ -181,7 +190,7 @@ section {
   padding: 2rem 1rem;
   text-align: center;
   font-size: 0.875rem;
-  color: var(--feather-grey);
+  color: var(--color-muted);
 }
 
 /* ───── Scroll‑reveal ───── */
@@ -198,7 +207,7 @@ section {
 /* ───── Utility ───── */
 .small {
   font-size: 0.875rem;
-  color: var(--feather-grey);
+  color: var(--color-muted);
 }
 
 /*  LANGUAGE TOGGLE  */
@@ -206,7 +215,7 @@ section {
   position: fixed;
   top: 1rem;
   right: 1rem;
-  background: var(--feather-grey);
+  background: var(--color-muted);
   color: #fff;
   border: none;
   border-radius: 50%;
@@ -218,7 +227,7 @@ section {
   z-index: 1000;
 }
 .lang-toggle:hover {
-  background: var(--rooster-red);
+  background: var(--color-primary);
   box-shadow: var(--shadow);
 }
 
@@ -238,7 +247,7 @@ form input,
 form select {
   margin-top: 0.4rem;
   padding: 0.7rem;
-  border: 1px solid var(--feather-grey);
+  border: 1px solid var(--color-muted);
   border-radius: var(--radius);
   font-size: 1rem;
 }
